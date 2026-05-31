@@ -1,0 +1,125 @@
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  padding: 1.5rem 0;
+  transition: all 0.4s ease;
+}
+
+.navbar.glass {
+  padding: 1rem 0;
+  border: none;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-links a:not(.btn):hover {
+  color: var(--color-eagle-gold);
+}
+
+.desktop-only { display: flex; }
+.mobile-only { display: none; }
+
+.mobile-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  gap: 1.5rem;
+  overflow: hidden;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-only { display: none; }
+  .mobile-only { display: block; background: transparent; border: none; color: white; cursor: pointer; }
+}
+
+/* Hero */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: -100px 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, var(--color-midnight-black) 0%, rgba(11, 15, 15, 0.7) 50%, transparent 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  padding-top: 5rem;
+}
+
+/* Particles */
+.particles-container {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  bottom: -10px;
+  width: 4px;
+  height: 4px;
+  background: var(--color-eagle-gold);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--color-eagle-gold);
+  animation: floatUp infinite linear;
+  opacity: 0;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 0; }
+  10% { opacity: 0.8; }
+  90% { opacity: 0.8; }
+  100% { transform: translateY(-100vh); opacity: 0; }
+}
