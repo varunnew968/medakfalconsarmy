@@ -14,7 +14,7 @@ const Identity = () => {
   return (
     <section id="identity" className="section-padding relative overflow-hidden bg-dark-bg" ref={containerRef}>
       <div className="container">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
           
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
@@ -45,7 +45,7 @@ const Identity = () => {
 
           <motion.div 
             style={{ y: parallaxY }}
-            className="identity-visual relative w-full h-[500px]"
+            className="identity-visual relative w-full h-[300px] md:h-[500px]"
           >
             <div className="absolute inset-0 bg-primary-orange/5 blur-[100px] rounded-full pointer-events-none" />
             

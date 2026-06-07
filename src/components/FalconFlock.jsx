@@ -65,20 +65,8 @@ const FalconFlock = () => {
       <div className="container relative z-10">
         <div className="text-center mb-8">
           <h2 className="heading-lg text-white">The Falcon <span className="text-primary-orange">Flock</span></h2>
-          <p className="text-muted text-lg tracking-widest uppercase mt-2">Draft Incoming</p>
+          <p className="text-muted text-lg tracking-widest uppercase mt-2">Meet Our Squad</p>
         </div>
-
-        {/* Draft Notice */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="bg-primary-orange/10 border border-primary-orange/30 rounded-xl p-6 text-center max-w-3xl mx-auto mb-16 backdrop-blur-sm"
-        >
-          <p className="text-white text-lg font-medium">
-            🚨 Official player drafts and full squad announcements will be made on the upcoming auction day as per the latest <span className="text-primary-orange font-bold uppercase tracking-wide">TG20 League</span> schedule. Stay tuned!
-          </p>
-        </motion.div>
 
         {/* Captain Spotlight */}
         <motion.div 
@@ -92,7 +80,7 @@ const FalconFlock = () => {
           <div className="absolute inset-0 bg-primary-orange/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
           
           <div className="grid md:grid-cols-2">
-            <div className="relative overflow-hidden h-[400px] md:h-auto bg-black">
+            <div className="relative overflow-hidden h-[300px] md:h-auto bg-black">
               {/* Image zoom effect */}
               {captain && captain.resourceType === 'video' ? (
                 <video 
@@ -120,14 +108,14 @@ const FalconFlock = () => {
                 The commander of the Medak Falcons is a seasoned international star ready to lead our franchise to ultimate victory. Stay tuned for the official reveal.
               </p>
               
-              <div className="flex gap-6 mb-8">
+              <div className="flex flex-wrap gap-4 md:gap-6 mb-8 justify-center md:justify-start">
                 <div className="text-center">
-                  <div className="text-2xl font-bold font-heading text-white flex justify-center"><Target size={24} className="text-primary-orange mr-2" /></div>
-                  <div className="text-xs text-muted mt-1 uppercase tracking-wider">{captain ? captain.role : "Batsman"}</div>
+                  <div className="text-xl md:text-2xl font-bold font-heading text-white flex justify-center"><Target size={20} className="text-primary-orange mr-1 md:mr-2" /></div>
+                  <div className="text-[10px] md:text-xs text-muted mt-1 uppercase tracking-wider">{captain ? captain.role : "Batsman"}</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold font-heading text-white flex justify-center"><Zap size={24} className="text-primary-orange mr-2" /></div>
-                  <div className="text-xs text-muted mt-1 uppercase tracking-wider">Aggressive</div>
+                  <div className="text-xl md:text-2xl font-bold font-heading text-white flex justify-center"><Zap size={20} className="text-primary-orange mr-1 md:mr-2" /></div>
+                  <div className="text-[10px] md:text-xs text-muted mt-1 uppercase tracking-wider">Aggressive</div>
                 </div>
               </div>
               
@@ -143,8 +131,8 @@ const FalconFlock = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-2 sm:gap-6 md:gap-8 justify-items-center"
+          viewport={{ once: true, margin: "-50px" }}
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-6 md:gap-8 justify-items-center"
         >
           {players.map((player, index) => (
             <motion.div
@@ -175,10 +163,10 @@ const FalconFlock = () => {
               </div>
 
               {/* Content */}
-              <div className="absolute bottom-0 left-0 w-full p-2 md:p-5 z-20 flex flex-col items-center text-center transform translate-y-2 md:translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                <h4 className="font-heading font-bold text-white text-[0.7rem] md:text-xl mb-0.5 md:mb-1 tracking-wide truncate w-full px-1">{player.name}</h4>
-                <p className="text-primary-orange text-[0.5rem] md:text-xs font-semibold tracking-widest uppercase mb-1 md:mb-4">{player.role}</p>
-                <button className="opacity-0 group-hover:opacity-100 text-[0.5rem] md:text-xs text-white border border-white/20 hover:border-primary-orange hover:text-primary-orange px-2 py-1 md:px-4 md:py-2 rounded transition-all duration-300 uppercase tracking-wider">
+              <div className="absolute bottom-0 left-0 w-full p-2 md:p-5 z-20 flex flex-col items-center text-center transform translate-y-0 md:translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <h4 className="font-heading font-bold text-white text-xs md:text-xl mb-0.5 md:mb-1 tracking-wide truncate w-full px-1">{player.name}</h4>
+                <p className="text-primary-orange text-[0.6rem] md:text-xs font-semibold tracking-widest uppercase mb-1 md:mb-4">{player.role}</p>
+                <button className="opacity-100 md:opacity-0 group-hover:opacity-100 text-[0.6rem] md:text-xs text-white border border-white/20 hover:border-primary-orange hover:text-primary-orange px-2 py-1 md:px-4 md:py-2 rounded transition-all duration-300 uppercase tracking-wider mb-1 md:mb-0">
                   View
                 </button>
               </div>

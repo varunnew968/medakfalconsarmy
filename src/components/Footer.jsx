@@ -15,7 +15,7 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div className="text-center border-t border-white/5 pt-12">
           <h2 className="text-5xl md:text-7xl font-heading font-bold text-white mb-6 select-none tracking-tight">
-            MFA <span className="text-primary-orange">ARMY</span>
+            Medak Falcons <span className="text-primary-orange">Army</span>
           </h2>
           
           <div className="text-sm font-bold tracking-[0.3em] text-eagle-gold mb-12 uppercase">

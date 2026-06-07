@@ -29,12 +29,12 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
         >
-          <h2 className="heading-md text-gold tracking-wide mb-4 text-center sm:text-left">One Team. One Pride.</h2>
-          <h1 className="heading-xl mb-6 text-center sm:text-left">
-            MEDAK <br/>
-            <span className="text-red">FALCONS</span> ARMY
+          <h2 className="heading-md text-gold tracking-wide mb-4 text-center sm:text-left text-xl md:text-2xl">One Team. One Pride.</h2>
+          <h1 className="heading-xl mb-4 md:mb-6 text-center sm:text-left leading-tight text-4xl md:text-6xl lg:text-8xl">
+            Medak <br/>
+            <span className="text-red">Falcons</span> Army
           </h1>
-          <p className="text-muted text-lg max-w-2xl mb-10 text-center sm:text-left">
+          <p className="text-muted text-base md:text-lg max-w-2xl mb-8 md:mb-10 text-center sm:text-left">
             The Ultimate Fan Community of Medak. A premium sports franchise experience where royal heritage meets modern speed.
           </p>
           
